@@ -14,7 +14,7 @@ var fs = require('fs');
 
 fs.readdir('photos', (err, files) => {
     var cameras = JSON.parse(fs.readFileSync('cameras.json', 'utf8')).map(
-        camera => new camera(
+        camera => new Camera(
             camera.deviceId,
             camera.latitude,
             camera.longitude,
